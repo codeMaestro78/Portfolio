@@ -37,7 +37,7 @@ export const Hero = () => {
           />
 
           <p className="mb-4 text-center text-sm md:text-lg md:tracking-wider lg:text-2xl">
-          Hi, I'm {links.ownerName}, an AI/ML developer based in India.
+          Hi, I&apos;m {links.ownerName}, an AI/ML developer based in India.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 md:mt-10">
