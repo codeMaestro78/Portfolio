@@ -3,16 +3,15 @@ import { links } from "@/config";
 export const navItems = [
   { name: "About", link: "#about" },
   { name: "Projects", link: "#projects" },
-  { 
-    name: "Resume", 
+  { name: "ML Projects", link: "#ml-showcase" },
+  {
+    name: "Resume",
     link: "/Resume.pdf",
     download: true,
     fileName: `${links.ownerName}_Resume.pdf`
   },
   { name: "Contact", link: "#contact" },
-] as const;
-
-export const gridItems = [
+] as const;export const gridItems = [
   {
     id: 1,
     title: "I prioritize client collaboration, fostering open communication ",
@@ -40,8 +39,8 @@ export const gridItems = [
   className: "lg:col-span-2 md:col-span-3 md:row-span-2",
   imgClassName: "",
   titleClassName: "justify-center",
-  img: "", 
-  spareImg: "", 
+  img: "",
+  spareImg: "",
 },
 
   {
@@ -135,3 +134,46 @@ export const techStack = {
     "Google Cloud"
   ]
 } as const;
+
+export const mlModels = [
+  {
+    id: 1,
+    title: "Stock Price Predictor",
+    description: "LSTM-based neural network for predicting stock prices using historical data and technical indicators.",
+    category: "Time Series",
+    tech: ["Python", "TensorFlow", "Pandas", "YFinance"],
+    accuracy: "89.2%",
+    dataset: "S&P 500 Historical Data",
+    features: ["Real-time predictions", "Interactive charts", "Multiple timeframes"],
+    githubLink: "https://github.com/codeMaestro78/AlphaVista",
+    icon: "📈",
+    complexity: "Advanced"
+  },
+  {
+    id: 2,
+    title: "Sentiment Analysis Engine",
+    description: "NLP model that analyzes text sentiment with confidence scores and emotion detection.",
+    category: "Natural Language Processing",
+    tech: ["Python", "BERT", "Transformers", "PyTorch"],
+    accuracy: "94.5%",
+    dataset: "Web articles",
+    features: ["Real-time analysis", "Emotion detection", "Confidence scores"],
+    githubLink: "https://github.com/codeMaestro78/Text-Analysis-and-Sentiment-Analysis-Tool", // Update this to your actual repo
+    icon: "🎭",
+    complexity: "Intermediate"
+  },
+
+  {
+    id: 3,
+    title: "Market Segmentation AI",
+    description: "Clustering algorithm for customer segmentation and market analysis using ML techniques.",
+    category: "Clustering & Analytics",
+    tech: ["Python", "Scikit-learn", "K-Means", "PCA"],
+    accuracy: "91.7%",
+    dataset: "E-commerce Customer Data",
+    features: ["Interactive clustering", "3D visualization", "Segment insights"],
+    githubLink: "https://github.com/codeMaestro78", // Update this to your actual repo
+    icon: "🎯",
+    complexity: "Intermediate"
+  }
+] as const;

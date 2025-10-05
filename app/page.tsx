@@ -1,5 +1,5 @@
-import dynamic from 'next/dynamic';
 import { navItems } from "@/data";
+import dynamic from 'next/dynamic';
 
 // Dynamically import components that use browser APIs
 const DynamicFloatingNav = dynamic(
@@ -37,6 +37,11 @@ const DynamicFooter = dynamic(
   { ssr: true }
 );
 
+const DynamicMLShowcase = dynamic(
+  () => import('@/components/ml-showcase').then((mod) => mod.MLShowcase),
+  { ssr: true }
+);
+
 const MainPage = () => {
   return (
     <main className="relative mx-auto flex flex-col items-center justify-center overflow-clip bg-black-100 px-5 sm:px-10">
@@ -46,6 +51,7 @@ const MainPage = () => {
         <DynamicHero />
         <DynamicGrid />
         <DynamicRecentProjects />
+        <DynamicMLShowcase />
         <DynamicExperience />
         <DynamicApproach />
         <DynamicFooter />

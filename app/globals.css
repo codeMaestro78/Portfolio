@@ -86,4 +86,46 @@
   .black-gradient {
     background: linear-gradient(90deg, #161a31 0%, #06091f 100%);
   }
+
+  /* ML Showcase animations */
+  .ml-card-hover {
+    @apply transition-all duration-300 ease-in-out;
+    @apply hover:scale-[1.02] hover:shadow-2xl hover:shadow-purple/20;
+  }
+
+  .ml-demo-entrance {
+    animation: modalSlideIn 0.3s ease-out;
+  }
+
+  @keyframes modalSlideIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px) scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+
+  .ml-metric-counter {
+    @apply tabular-nums;
+    animation: countUp 2s ease-out;
+  }
+
+  @keyframes countUp {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .ml-tech-badge {
+    @apply transition-all duration-200;
+    @apply hover:scale-105 hover:bg-purple/20 hover:text-purple;
+  }
 }
